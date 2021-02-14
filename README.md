@@ -29,7 +29,7 @@ In Auto Build Marlin at Visual Studio, click on Build botton and wait for the gr
 
 ## Where is the firmware I've compilled
 In my case: $\.pio\build\STM32F103RET6_creality\
-File to copy to a SD card to flash the firmware: **$\.pio\build\STM32F103RET6_creality\\\*.bin**\
+File to copy to a SD card to flash the firmware: **$\.pio\build\STM32F103RET6_creality\\\*.bin**
 
 ## Originally adapted from:
 https://github.com/Flawioo/Creality-Ender-3-board-v4.2.7/blob/master/README.md
