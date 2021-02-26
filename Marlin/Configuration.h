@@ -476,6 +476,14 @@
 // PID Tuning Guide here: https://reprap.org/wiki/PID_Tuning
 
 // Comment the following line to disable PID and enable bang-bang.
+// Set blower to 100%: M106
+// Hotend, omit U to not save settings: M303 E0 S215 C10 U1
+// Set hotend settings: M301 P24.10 I2.04 D70.99
+// Turn off blower: M106 S0
+// Bed: M303 E-1 S60 C10 U1
+// Save settings: M500
+// Read back settings: M503
+
 #define PIDTEMP
 #define BANG_MAX 255     // Limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
@@ -495,9 +503,9 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kp  24.10
+    #define DEFAULT_Ki   2.04
+    #define DEFAULT_Kd  70.99
   #endif
 #endif // PIDTEMP
 
