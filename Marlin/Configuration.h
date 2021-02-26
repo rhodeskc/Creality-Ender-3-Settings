@@ -480,8 +480,7 @@
 // Hotend, omit U to not save settings: M303 E0 S215 C10 U1
 // Set hotend settings: M301 P24.10 I2.04 D70.99
 // Turn off blower: M106 S0
-// Bed: M303 E-1 S60 C1 U1
-// Set bed settings: 
+// Bed: M303 E-1 S60 C10 U1
 // Save settings: M500
 // Read back settings: M503
 
