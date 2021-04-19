@@ -752,8 +752,31 @@
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
+ * E0 is the configuration to modify for steps/mm extrusion, aka 4th number.
+ * 
+ * Direct Drive Calibration instructions:
+ * 120 – [length from extruder to mark] = [actual length extruded]
+ * From the LCD screen, push the knob and navigate to Control -> Motion -> ESteps/mm to view the original setting.
+ * [steps/mm value] x 100 = [steps taken]
+ * [steps taken] / [actual length extruded] = [accurate steps/mm value]
+ * M92 E###.# with steps/mm
+ * M500
+ * 
+ * The higher the value, the more steps needed to cover 1mm, so more like teeth on bicycle cog - more teeth/steps per mm, slower extrusion.
+ * 
+ * In this case, initial was 93. Measured 66mm when extruding 100mm
+ * 120-54 = 66
+ * 93 steps / mm was original setting
+ * 93 steps/mm * 100mm = 9300 steps
+ * 9300 / 66 = 140.91
+ * M92 E140.9
+ * M500
+ * 
+ * Set to 141 due to calibration test slightly overextruding, but could be as high as 142
+ * Default setting was 130
+ * 
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 141 }
 
 /**
  * Default Max Feed Rate (mm/s)
