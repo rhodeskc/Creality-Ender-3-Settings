@@ -765,18 +765,20 @@
  * The higher the value, the more steps needed to cover 1mm, so more like teeth on bicycle cog - more teeth/steps per mm, slower extrusion.
  * 
  * In this case, initial was 93. Measured 66mm when extruding 100mm
- * 120-54 = 66
+ * 120-53.5 = 66.5
  * 93 steps / mm was original setting
  * 93 steps/mm * 100mm = 9300 steps
- * 9300 / 66 = 140.91
- * M92 E140.9
+ * 9300 / 66 = 139.9
+ * M92 E139.9
  * M500
+ * M503
  * 
- * Set to 141 due to calibration test slightly overextruding, but could be as high as 142
+ * Newtownian method for calibration, rerun
+ * 
  * Default setting was 130
  * 
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 141 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.9 }
 
 /**
  * Default Max Feed Rate (mm/s)
