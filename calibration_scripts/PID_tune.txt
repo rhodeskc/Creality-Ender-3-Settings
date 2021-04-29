@@ -1,3 +1,4 @@
+M503; Get settings before starting test (save for later)
 M106; Set blower to 100%
 M303 E0 S215 C10 U1; // Hotend, omit U to not save settings
 M106 S0; // Turn off blower
