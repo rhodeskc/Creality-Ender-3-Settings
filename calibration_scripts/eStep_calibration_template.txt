@@ -1,0 +1,25 @@
+; Change S215 to whatever the filament should be using here for temperature.
+
+M503 ; get all values and verify. Look at for the calculations: https://github.com/rhodeskc/Creality-Ender-3-Settings/blob/main/Marlin/Configuration.h#L771
+
+; Before performing this step, mark off 20mm and 120mm of filament from a calibration point.
+G28 ; Home all axes
+G1 Z2.0 F300 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X100 Y100 Z50 F500.0 ; Move to start position
+M82 ;absolute extrusion mode
+G92 E0 ; Reset Extruder
+M104 S215 ; Hotend to 215
+M105 ; Display temperature
+M109 S215 ; Wait for hotend to hit 215
+G1 F50 ; Set to 50mm per minute, theoretically will be 4 minutes.
+G1 E100 F50; Extrude 100mm @ 50mm per minute
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+M105 ; Display temperature
+M84 X Y E ;Disable all steppers but Z
+
+M503 ; Current values: M92 X80.00 Y80.00 Z400.00 E93.00
+M92 E140.9
+M500 ; Save settings
+M503 ; Report values

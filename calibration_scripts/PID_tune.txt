@@ -1,0 +1,10 @@
+M106; Set blower to 100%
+M303 E0 S215 C10 U1; // Hotend, omit U to not save settings
+M106 S0; // Turn off blower
+M500; Save settings
+M503; Read back settings
+
+; ------
+
+; Set hotend settings: M301 P24.10 I2.04 D70.99
+; Bed Tune: doesn't work on mine M303 E-1 S60 C10 U1
