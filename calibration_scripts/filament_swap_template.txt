@@ -1,0 +1,28 @@
+G28 ; Auto home
+G90 ; Absolute positioning
+G0 F3000; Fast moves
+G0 Z5.0 F3000; Nozzle up to avoid smacking the bed
+G0 X100 Y100 Z100 F3000; Move to 100,100,100
+M104 S210 ; Change this line from filament A hotend temp #######
+M105
+M109 S210 ; Change this line from filament A hotend temp #######
+M106 ;Turn-on fan
+G92 E0 ; Reset Extruder
+G1 E50 F60; Extrude 100mm @ 50mm per minute
+
+M0 ; Resume with keypress, manually feed until past extruder line.
+M104 S215 ; Change this line from filament B hotend temp #######
+M105
+M109 S215 ; Change this line from filament B hotend temp #######
+G92 E0 ; Reset Extruder
+G1 E50 F60; Extrude 100mm @ 50mm per minute
+
+M0 ; Resume with keypress, manually feed if needed to get past the needed point.
+M104 S0 ; Turn-off hotend
+M106 S0; Turn-off fan
+
+M0 ; Resume with keypress, keep feeding until clean nozzle.
+G0 X10 Y10 Z5 F3000; Move to 10,10,5
+G28 ; Auto home slowly
+M105 ; Display temperature
+M84 X Y E ; Disable all steppers but Z to feed if needed.
