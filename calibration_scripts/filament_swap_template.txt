@@ -8,14 +8,14 @@ M105
 M109 S210 ; Change this line from filament A hotend temp #######
 M106 ;Turn-on fan
 G92 E0 ; Reset Extruder
-G1 E50 F60; Extrude 100mm @ 50mm per minute
+G1 E50 F60; Extrude 50mm @ 60mm per minute
 
 M0 ; Resume with keypress, manually feed until past extruder line.
 M104 S215 ; Change this line from filament B hotend temp #######
 M105
 M109 S215 ; Change this line from filament B hotend temp #######
 G92 E0 ; Reset Extruder
-G1 E50 F60; Extrude 100mm @ 50mm per minute
+G1 E50 F60; Extrude 50mm @ 60mm per minute
 
 M0 ; Resume with keypress, manually feed if needed to get past the needed point.
 M104 S0 ; Turn-off hotend
