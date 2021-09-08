@@ -13,7 +13,8 @@ M82 ;absolute extrusion mode
 ; Ender 3 Custom Start G-code
 G28 ; Home all axes
 M106 S128
-M0 ; Resume with keypress
+@pause
+
 G92 E0 ; Reset Extruder
 G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
 G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
