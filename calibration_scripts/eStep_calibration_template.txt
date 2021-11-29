@@ -19,7 +19,8 @@ M140 S0 ;Turn-off bed
 M105 ; Display temperature
 M84 X Y E ;Disable all steppers but Z
 
-M503 ; Current values: M92 X80.00 Y80.00 Z400.00 E93.00
+M503 ; Recv: echo: M92 X80.00 Y80.00 Z400.00 E139.90
+
 M92 E140.9
 M500 ; Save settings
 M503 ; Report values

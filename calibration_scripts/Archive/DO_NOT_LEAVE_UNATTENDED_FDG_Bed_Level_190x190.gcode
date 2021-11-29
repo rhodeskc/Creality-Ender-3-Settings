@@ -1,14 +1,23 @@
+; This uses weird retraction settings designed for a bowden tube. Do not use it on the direct drive setup.
+
 ;FLAVOR:Marlin
 ;TIME:320
 ;Filament used: 0.282979m
 ;Layer height: 0.2
 ;Generated with Cura_SteamEngine 3.6.0
-M140 S60
+M140 S45
 M105
-M190 S60
+M190 S45
+M140 S60
 M104 S205
 M105
+M190 S60
 M109 S205
+; Play a tune
+M300 S880 P200 
+M300 S660 P250
+M300 S880 P300
+
 M82 ;absolute extrusion mode
 ; Ender 3 Custom Start G-code
 G28 ; Home all axes
@@ -3153,6 +3162,13 @@ M84 ; Disable stepper motors
 ; End of custom end GCode
 M82 ;absolute extrusion mode
 M104 S0
+
+; Play a tune
+M300 S440 P200 
+M300 S440 P250
+M300 S440 P300
+
+
 ;End of Gcode
 ;SETTING_3 {"global_quality": "[general]\\nversion = 4\\nname = FDG_Cura_Terrain
 ;SETTING_3 _Ender3_v1-6 (faster) #2\\ndefinition = fdmprinter\\n\\n[metadata]\\n

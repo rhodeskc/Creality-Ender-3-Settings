@@ -8,6 +8,14 @@ Recv: #define DEFAULT_Ki 2.28
 Recv: #define DEFAULT_Kd 67.81
 M301 P24.88 I2.28 D67.81
 
+New: M303 E0 S215 C10 U1; // 215C for GST3D white filament
+Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+Recv: #define DEFAULT_Kp 25.29
+Recv: #define DEFAULT_Ki 2.43
+Recv: #define DEFAULT_Kd 65.89
+M301 P25.29 I2.43 D65.89
+
+
 New: M303 E0 S200 C10 U1; // 200C for GST3D black filament
 Recv:  Classic PID
 Recv:  Kp: 26.32 Ki: 2.43 Kd: 71.20
