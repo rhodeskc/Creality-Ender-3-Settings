@@ -1,0 +1,11 @@
+Form factor: Rectangular
+Origin: Lower Left
+Heated Bed: Yes (checked)
+Heated Chamber: No (unchecked)
+Width: 220mm
+Depth: 220mm
+Height: 250mm
+Axes: Default**
+Custom Bounding Box: No (unchecked)
+Nozzle Diameter: 0.4mm
+Number of Extruders: 1

@@ -24,6 +24,9 @@ Recv: #define DEFAULT_Ki 2.43
 Recv: #define DEFAULT_Kd 71.20
 M301 P26.32 I2.43 D71.20
 
+Hatchbox white:
+M301 P24.59 I2.34 D64.55
+
 After each one always:
 M500
 M503
