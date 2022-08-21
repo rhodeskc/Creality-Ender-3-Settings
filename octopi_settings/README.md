@@ -32,6 +32,4 @@ Once that has completed, set the printer profile settings as follows:
 > - **Nozzle Diameter:** 0.4mm
 > - **Number of Extruders:** 1
 
-
-
 ![Raspberry Pi settings](raspberry_installer_settings.png)
