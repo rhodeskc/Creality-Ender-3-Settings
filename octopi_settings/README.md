@@ -1,4 +1,4 @@
-# Instructions
+# Installation Instructions
 1. [Install Pi imager for windows](https://www.raspberrypi.com/software/)
 1. Run the installer.
 1. Configure it per the instructions [here](https://octoprint.org/download/).
@@ -12,10 +12,10 @@
 1. Install the card back into the Raspberry Pi and let it boot up.
 1. Verify by going to [router main settings](http://192.168.1.1) that it has connected to the network
 1. Install the following 3rd party plugins
-> - [ArcWelder](https://plugins.octoprint.org/plugins/arc_welder/)
 > - [Automatic Shutdown](https://www.reddit.com/r/octoprint/comments/mm9cbi/automatic_shutdown_after_prints/)
 > > Got it working. Installed the plugin shutdown printer https://github.com/devildant/OctoPrint-ShutdownPrinter and set that at 110 degrees and at "Extra command / script" put the line "sudo shutdown -h now". Now the rpi turns off at 110 degrees and turns off the relay connected to the printer.
 > - [DisplayLayerProgress](https://all3dp.com/2/must-have-octoprint-plugins/)
+> - **Do not install ArcWelder**. See notes under [Cura](#Cura).
 
 OctoPi settings were saved at last install. They can be uploaded from *octoprint-backup-latest.zip*
 
@@ -33,3 +33,10 @@ Once that has completed, set the printer profile settings as follows:
 > - **Number of Extruders:** 1
 
 ![Raspberry Pi settings](raspberry_installer_settings.png)
+
+## Calibration scripts
+1. Create a folder called Calibration
+1. Upload calibration scripts from the *\calibration_scripts* directory 
+
+## Cura
+1. Install ArcWelder in Cura, but NOT in OctoPrint. It generates a bunch of additional files that are not helpful when you do the OctoPi one.
