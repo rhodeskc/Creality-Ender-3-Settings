@@ -40,3 +40,4 @@ Once that has completed, set the printer profile settings as follows:
 
 ## Cura
 1. Install ArcWelder in Cura, but NOT in OctoPrint. It generates a bunch of additional files that are not helpful when you do the OctoPi one.
+1. Also install TabAntiWarping extension
