@@ -1,4 +1,8 @@
+;Layer height: 0.2
 G28
+
+;LAYER_COUNT:1
+;LAYER:0
 G90; absolute positioning
 G0 F3000; Fast moves
 G0 Z100.0 F3000; Nozzle up to avoid smacking the bed
